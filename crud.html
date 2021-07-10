@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="NP">
+    <title>MyMarket</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- jQuery -->
+    <script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <!-- Bootstrap4 files-->
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Font awesome 5 -->
+    <link href="fonts/fontawesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet">
+    <!-- custom style -->
+    <link href="css/ui.css" rel="stylesheet" type="text/css"/>
+    <link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)"/>
+    <!-- our styles -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <!-- custom javascript -->
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/crud.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function () {
+        });
+    </script>
+
+</head>
+<body>
+<header class="section-header">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                                <li class="nav-item "><a class="nav-link" href="products.html">Product</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
+                                <li class="nav-item "><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="crud.html">Create<span
+                                        class="sr-only">(current)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2"></div>
+                <!--The block with icons-->
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                    <div class="widgets-wrap no-gutters py-1 d-flex justify-content-center align-items-center">
+                        <div class="col-auto">
+                            <div class="widget-header dropdown">
+                                <a href="#" data-toggle="dropdown" data-offset="20,10">
+                                    <div class="icontext">
+                                        <div class="icon-wrap"><i class="text-light icon-sm fa fa-user"></i></div>
+                                        <div class="text-wrap text-light">
+                                            Sign in <i class="fa fa-caret-down"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <form class="px-4 py-3">
+                                        <div class="form-group">
+                                            <label>Email address</label>
+                                            <input type="email" class="form-control" placeholder="email@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                    </form>
+                                    <hr class="dropdown-divider">
+                                    <a class="dropdown-item" href="#">Have account? Sign up</a>
+                                    <a class="dropdown-item" href="#">Forgot password?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <a href="cart.html" class="widget-header">
+                                <div class="icontext">
+                                    <div class="icon-wrap"><i class="text-light icon-sm fa fa-shopping-cart"></i></div>
+                                    <div class="text-wrap text-light">Cart</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="#" class="widget-header">
+                                <div class="icontext">
+                                    <div class="icon-wrap"><i class="text-light icon-sm  fa fa-heart"></i></div>
+                                    <div class="text-wrap text-light">Favorites</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="header-main">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-xl-4 col-lg-4 col-md-10 col-sm-10">
+                    <div class="brand-wrap">
+                        <img class="logo" src="images/logo.png">
+                        <h2 class="logo-text">MyMarket</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <form action="#" class="widget-header float-right">
+                        <div class="input-group">
+                            <input type="text" class="form-control-lg" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+<!-- ========================= SECTION INTRO ========================= -->
+<br>
+<div class="container">
+    <div class="starter-template">
+        <div class="info-table-header-block">
+            <button type="button" class="btn btn-primary add-new-button" data-toggle="modal" data-target="#addnewModal">
+                Add New
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="addnewModal" tabindex="-1" role="dialog" aria-labelledby="addnewModalTitle"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="addnewModalTitle">Insert Product Information</h4>
+                    </div>
+                    <!-- User Create Modal Start -->
+                    <div class="modal-body">
+                        <form id="input_form" onsubmit="saveMemberInfo(); return false;">
+                            <div class="form-group">
+                                <label for="name">Name
+                                    <span class="required-field">*</span>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Enter Name of Product" id="name"
+                                       required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="author">Author
+                                    <span class="required-field">*</span>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Enter Author of Product"
+                                       id="author" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description
+                                    <span class="required-field">*</span>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Enter Description of Product"
+                                       id="description" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price
+                                    <span class="required-field">*</span>
+                                </label>
+                                <input type="number" class="form-control" placeholder="Enter Price of Product "
+                                       id="price" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category
+                                    <span class="required-field">*</span>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Enter Category of Product"
+                                       id="category" required/>
+                            </div>
+
+                            <div class="modal-footer-extended">
+                                <button class="btn btn-primary">Create</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- User Create Modal End -->
+                </div>
+            </div>
+        </div>
+        <table id="member_table" class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<!-- User Information Modal Start -->
+<div id="show_user_info">
+    <div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="showModalTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="showModal">Product Information</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="show_name">Name</label>
+                        <input type="text" class="form-control" id="show_name" value="" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="show_author">Author</label>
+                        <input type="text" class="form-control" id="show_author" value="" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="show_description">Description</label>
+                        <input type="text" class="form-control" id="show_description" value="" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="show_price">Price</label>
+                        <input type="email" class="form-control" id="show_price" value="" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="show_category">Category</label>
+                        <input type="text" class="form-control" id="show_category" value="" disabled>
+                    </div>
+
+                    <div class="modal-footer-extended">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- User Information Modal End -->
+
+<!-- User Edit Modal Start -->
+<div id="show_user_info">
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="editModal">Edit Product Information</h4>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="updateMemberData(); return false;">
+                        <div class="form-group">
+                            <label for="edit_name">Name
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="edit_name" value="" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_author">Author
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="edit_author" value="" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_description">Description
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="edit_description" value="" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_price">Price
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="number" class="form-control" id="edit_price" value="" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit_category">Category
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="edit_category" value="" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="member_id">
+                        </div>
+
+                        <div class="modal-footer-extended">
+                            <button class="btn btn-success">Update</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- User Edit Modal End -->
+
+<!-- Delete Confirmation Dialog Start -->
+<div id="show_user_info">
+    <div class="modal fade" id="deleteDialog" tabindex="-1" role="dialog" aria-labelledby="deleteDialogTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="deleteDialog">Warning!</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Are you sure, want to delete this member? </h4>
+                    <input type="hidden" id="deleted-member-id" value="">
+                    <div class="modal-footer-extended">
+                        <button class="btn btn-danger" onclick="deleteMemberData()">Delete</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+<!-- =================== FOOTER ========================= -->
+<footer class="section-footer bg-primary fixed-bottom">
+    <div class="container">
+        <section class="footer-top padding-top">
+            <div class="row">
+                <aside class="col-sm-12 col-md-6 col-xl-3 col-lg-3 white">
+                    <h5 class="title">Customer Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Money refund</a></li>
+                        <li><a href="#">Terms and Policy</a></li>
+                        <li><a href="#">Open dispute</a></li>
+                    </ul>
+                </aside>
+                <aside class="col-sm-12 col-md-6 col-xl-3 col-lg-3 white">
+                    <h5 class="title">My Account</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"> User Login </a></li>
+                        <li><a href="#"> User register </a></li>
+                        <li><a href="#"> Account Setting </a></li>
+                        <li><a href="#"> My Orders </a></li>
+                        <li><a href="#"> My Wishlist </a></li>
+                    </ul>
+                </aside>
+                <aside class="col-sm-12 col-md-6 col-xl-3 col-lg-3 white">
+                    <h5 class="title">About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"> Our history </a></li>
+                        <li><a href="#"> How to buy </a></li>
+                        <li><a href="#"> Delivery and payment </a></li>
+                    </ul>
+                </aside>
+                <aside class="col-sm-12 col-md-6 col-xl-3 col-lg-3">
+                    <article class="white">
+                        <h5 class="title">Contacts</h5>
+                        <p>
+                            <strong>Phone: </strong> +123456789 <br>
+                            <strong>Fax:</strong> +123456789
+                        </p>
+
+                        <div class="btn-group white">
+                            <a class="btn btn-facebook" title="Facebook" target="_blank" href="#"><i
+                                    class="fab fa-facebook-f  fa-fw"></i></a>
+                            <a class="btn btn-instagram" title="Instagram" target="_blank" href="#"><i
+                                    class="fab fa-instagram  fa-fw"></i></a>
+                            <a class="btn btn-youtube" title="Youtube" target="_blank" href="#"><i
+                                    class="fab fa-youtube  fa-fw"></i></a>
+                            <a class="btn btn-twitter" title="Twitter" target="_blank" href="#"><i
+                                    class="fab fa-twitter  fa-fw"></i></a>
+                        </div>
+                    </article>
+                </aside>
+            </div>
+            <br>
+        </section>
+        <section class="footer-bottom row border-top-white">
+            <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
+                <p class="text-white-50"> Made ... <br> by Me</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
+                <p class="text-md-right text-white-50">
+                    Copyright &copy <br>
+                    <a href="me@gmail.com" class="text-white-50">NP</a>
+                </p>
+            </div>
+        </section>
+    </div>
+</footer>
+<!-- ========================= FOOTER END // ========================= -->
+</body>
+</html>
