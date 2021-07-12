@@ -17,9 +17,8 @@
     <link href="css/ui.css" rel="stylesheet" type="text/css"/>
     <link href="css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)"/>
     <!-- our styles -->
+    <link href="css/home.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <!-- custom javascript -->
     <script src="js/script.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -130,6 +129,38 @@
                         </div>
                     </form>
                 </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <!--                                        <form action="#" class="widget-header float-right">-->
+                    <!--                                            <div class="input-group">-->
+                    <!--                                                <div class="header__cart">-->
+                    <!--                                                    <div class="header__submenu" id="submenu">-->
+                    <!--                                                        <button class="header__cart-btn" id="toggle-cart-btn">-->
+                    <!--                                                            <svg class="cart" width="24" height="24" viewBox="0 0 24 24">-->
+                    <!--                                                                <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>-->
+                    <!--                                                            </svg>-->
+                    <!--                                                            Your Cart-->
+                    <!--                                                        </button>-->
+                    <!--                                                        <div id="shopping-cart" class="shopping-cart-container">-->
+                    <!--                                                            <table id="cart-content">-->
+                    <!--                                                                <thead>-->
+                    <!--                                                                <tr>-->
+                    <!--                                                                    <th>Image</th>-->
+                    <!--                                                                    <th>Name</th>-->
+                    <!--                                                                    <th>Price</th>-->
+                    <!--                                                                    <th></th>-->
+                    <!--                                                                </tr>-->
+                    <!--                                                                </thead>-->
+                    <!--                                                                <tbody></tbody>-->
+                    <!--                                                            </table>-->
+                    <!--                                                            <p class="total-container" id="total-price"></p>-->
+                    <!--                                                            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>-->
+                    <!--                                                            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>-->
+                    <!--                                                        </div>-->
+                    <!--                                                    </div>-->
+                    <!--                                                </div>-->
+                    <!--                                            </div>-->
+                    <!--                                        </form>-->
+                </div>
             </div>
         </div>
     </section>
@@ -149,144 +180,66 @@
     </div>
 </section>
 <!-- ========================= SECTION INTRO END// ========================= -->
-
-<h4 class="title-text text-danger text-center">Items with discount</h4>
-<!-- ============== owl slide items  ============= -->
+<h4 class="title-text text-danger text-center">Products</h4>
 <div class="container">
-<section class="regular slider">
-    <div>
-        <a href="#">
-            <div class="item-slide">
-                <figure class="card card-product">
-                    <div class="img-wrap"> <img src="https://www.edituratrei.ro/images/productimage/2021/06/07/adevarul-1623048247.jpg"> </div>
-                    <figcaption class="info-wrap text-center">
-                        <h6 class="title text-truncate">Adevarul</h6>
-                        <small><del>200MDL</del>&nbsp; &nbsp; -50%</small>
-                        <p class="price">100MDL</p>
-                    </figcaption>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
-                </figure>
+    <div class="grid" id="grid">
+        <div class="card">
+            <img width=200px; height=250px;
+                 src="https://www.edituratrei.ro/images/productimage/2021/06/07/adevarul-1623048247.jpg"
+                 class="card__image">
+            <div class="card__info">
+                <h4 class="card__title">Adevarul</h4>
+                <p class="card__text ">Tom Phillips</p>
+                <p class="card__price">200 MDL</p>
+                <button class="btn btn-block btn-outline-danger add-to-cart" data-id="1">Add to Cart</button>
             </div>
-        </a>
-    </div>
-    <div>
-        <a href="#">
-            <div class="item-slide">
-                <figure class="card card-product">
-                    <div class="img-wrap"> <img src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/e1aa0675/5362/4919/be17/81967b1240bc/e1aa0675-5362-4919-be17-81967b1240bc_1.jpg"> </div>
-                    <figcaption class="info-wrap text-center">
-                        <h6 class="title text-truncate">Oamenii</h6>
-                        <small><del>240MDL</del>&nbsp; &nbsp; -50%</small>
-                        <p class="price">120MDL</p>
-                    </figcaption>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
-                </figure>
+        </div>
+        <div class="card">
+            <img width=200px; height=250px;
+                 src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/e1aa0675/5362/4919/be17/81967b1240bc/e1aa0675-5362-4919-be17-81967b1240bc_1.jpg"
+                 class="card__image" alt="">
+            <div class="card__info">
+                <h4 class="card__title">Oamenii</h4>
+                <p class="card__text">Tom Phillips</p>
+                <p class="card__price">240 MDL</p>
+                <button class="btn btn-block btn-outline-danger add-to-cart" data-id="2">Add to Cart</button>
             </div>
-        </a>
-    </div>
-    <div>
-        <a href="#">
-            <div class="item-slide">
-                <figure class="card card-product">
-                    <div class="img-wrap"> <img src="https://librarius.md/img/400/600/aHR0cHM6Ly9jZG4ubGlicmFyaXVzLm1kL2ltZy9jYXRhbG9nL2N1LXVsdGltYS1zdWZsYXJlXzE1MTE4NzQ2NDUuanBlZw_e__e_.jpeg"> </div>
-                    <figcaption class="info-wrap text-center">
-                        <h6 class="title text-truncate">Cu ultima suflare</h6>
-                        <small><del>200MDL</del>&nbsp; &nbsp; -50%</small>
-                        <p class="price">100MDL</p>
-                    </figcaption>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
-                </figure>
+        </div>
+        <div class="card">
+            <img width=200px; height=250px;
+                 src="https://static.cinemagia.ro/img/resize/db/movie/26/06/065/the-abc-murders-841920l-0x640-h-14ddc068.jpg"
+                 alt="" class="card__image">
+            <div class="card__info">
+                <h4 class="card__title">Ucigasul ABC</h4>
+                <p class="card__text">Jane Smith</p>
+                <p class="card__price">190 MDL</p>
+                <button class="btn btn-block btn-outline-danger  add-to-cart" data-id="4">Add to Cart</button>
             </div>
-        </a>
-    </div>
-    <div>
-        <a href="#">
-            <div class="item-slide">
-                <figure class="card card-product">
-                    <div class="img-wrap"> <img src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/0f19c22f/7f59/4dc7/aeb8/67e7cba055f6/0f19c22f-7f59-4dc7-aeb8-67e7cba055f6_1.jpg"> </div>
-                    <figcaption class="info-wrap text-center">
-                        <h6 class="title text-truncate">Pacientul</h6>
-                        <small><del>340MDL</del>&nbsp; &nbsp; -50%</small>
-                        <p class="price">170MDL</p>
-                    </figcaption>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
-                </figure>
+        </div>
+
+        <div class="card">
+            <img width=200px; height=250px;
+                 src="https://librarius.md/img/400/600/aHR0cHM6Ly9jZG4ubGlicmFyaXVzLm1kL2ltZy9jYXRhbG9nL2N1LXVsdGltYS1zdWZsYXJlXzE1MTE4NzQ2NDUuanBlZw_e__e_.jpeg"
+                 class="card__image" alt="">
+            <div class="card__info">
+                <h4 class="card__title">Cu ultima suflare</h4>
+                <p class="card__text">Paul Kalanithi</p>
+                <p class="card__price">200 MDL</p>
+                <button class="btn btn-block btn-outline-danger add-to-cart" data-id="3">Add to Cart</button>
             </div>
-        </a>
-    </div>
-    <div>
-        <a href="#">
-            <div class="item-slide">
-                <figure class="card card-product">
-                    <div class="img-wrap"> <img src="https://static.cinemagia.ro/img/resize/db/movie/26/06/065/the-abc-murders-841920l-0x640-h-14ddc068.jpg"> </div>
-                    <figcaption class="info-wrap text-center">
-                        <h6 class="title text-truncate">Ucigasul ABC</h6>
-                        <small><del>300MDL</del>&nbsp; &nbsp; -50%</small>
-                        <p class="price">150MDL</p>
-                    </figcaption>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
-                </figure>
+        </div>
+        <div class="card">
+            <img width=200px; height=250px;
+                 src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/0f19c22f/7f59/4dc7/aeb8/67e7cba055f6/0f19c22f-7f59-4dc7-aeb8-67e7cba055f6_1.jpg"
+                 alt="" class="card__image">
+            <div class="card__info">
+                <h4 class="card__title">Pacientul</h4>
+                <p class="card__text">Jane Smith</p>
+                <p class="card__price">170 MDL</p>
+                <button class="btn btn-block btn-outline-danger  add-to-cart" data-id="4">Add to Cart</button>
             </div>
-        </a>
+        </div>
     </div>
-    <div>
-        <a href="#">
-            <div class="item-slide">
-                <figure class="card card-product">
-                    <div class="img-wrap"> <img src="https://silviureut.ro/wp-content/uploads/2015/12/Caves-of-Steel.jpg"> </div>
-                    <figcaption class="info-wrap text-center">
-                        <h6 class="title text-truncate">Cavernele de oţel</h6>
-                        <small><del>220MDL</del>&nbsp; &nbsp; -50%</small>
-                        <p class="price">110MDL</p>
-                    </figcaption>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
-                </figure>
-            </div>
-        </a>
-    </div>
-</section>
 </div>
 <!-- ============== owl slide items end // ============= -->
 <br>
@@ -359,7 +312,6 @@
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/home.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 

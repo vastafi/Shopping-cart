@@ -1,4 +1,3 @@
-
 /**
  * Generating unique ID for new Input
  */
@@ -109,14 +108,13 @@ function insertIntoTableView(item, tableIndex) {
     authorCell.innerHTML = item.author;
     descriptionCell.innerHTML = item.description;
     priceCell.innerHTML = item.price;
-    categoryCell.innerHTML = '<a class="tag">'+item.category+'</a>'
+    categoryCell.innerHTML = '<a class="tag">' + item.category + '</a>'
     const guid = item.id;
 
-    actionCell.innerHTML = '<button class="btn btn-sm btn-default" onclick="showMemberData(' + guid + ')">View</button> ' +
+    actionCell.innerHTML = '<button class="btn btn-sm btn-outline-success" onclick="showMemberData(' + guid + ')">View</button> ' +
         '<button class="btn btn-sm btn-primary" onclick="showEditModal(' + guid + ')">Edit</button> ' +
         '<button class="btn btn-sm btn-danger" onclick="showDeleteModal(' + guid + ')">Delete</button>';
 }
-
 
 /**
  * Get Total Row of Table
@@ -168,7 +166,6 @@ function showEditModal(id) {
 
     $('#editModal').modal();
 }
-
 
 /**
  * Store Updated Member Data into the storage
@@ -227,5 +224,4 @@ function deleteMemberData() {
     $("#member_table").find("tr:not(:first)").remove();
     $('#deleteDialog').modal('hide');
     getTableData();
-
 }
