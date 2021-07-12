@@ -82,27 +82,42 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <a href="cart.html" class="widget-header">
-                                <div class="icontext">
-                                    <div class="icon-wrap"><i class="text-light icon-sm fa fa-shopping-cart"></i></div>
-                                    <div class="text-wrap text-light">Cart</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="#" class="widget-header">
-                                <div class="icontext">
-                                    <div class="icon-wrap"><i class="text-light icon-sm  fa fa-heart"></i></div>
-                                    <div class="text-wrap text-light">Favorites</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span
+                        class="total-count"></span>)
+                </button>
+                <button class="clear-cart btn btn-danger">Clear Cart</button>
+            </div>
+        </div>
     </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div>Total price: MDL<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="header-main">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
@@ -186,8 +201,8 @@
                             <button class="btn btn-primary">Submit</button>
                         </div>
                     </div>
-                </div><!-- Form with header -->
-            </div><!-- Grid column -->
+                </div>
+            </div>
             <div class="col-lg-6">
                 <!--Google map-->
                 <div id="map-container-section" class="z-depth-1-half map-container-section mb-4"
@@ -291,6 +306,9 @@
         </section>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/home.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript"></script>
 <!-- ========================= FOOTER END // ========================= -->
 </body>
 </html>

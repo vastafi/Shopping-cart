@@ -21,11 +21,11 @@
     <!-- custom javascript -->
     <script src="js/script.js" type="text/javascript"></script>
     <script type="text/javascript">
-           // jquery ready start
+        // jquery ready start
         $(document).ready(function () {
         });
     </script>
- </head>
+</head>
 <body>
 <header class="section-header">
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
@@ -81,27 +81,42 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <a href="cart.html" class="widget-header">
-                                <div class="icontext">
-                                    <div class="icon-wrap"><i class="text-light icon-sm fa fa-shopping-cart"></i></div>
-                                    <div class="text-wrap text-light">Cart</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="#" class="widget-header">
-                                <div class="icontext">
-                                    <div class="icon-wrap"><i class="text-light icon-sm  fa fa-heart"></i></div>
-                                    <div class="text-wrap text-light">Favorites</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span
+                        class="total-count"></span>)
+                </button>
+                <button class="clear-cart btn btn-danger">Clear Cart</button>
+            </div>
+        </div>
     </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div>Total price: MDL<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="header-main">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
@@ -112,7 +127,6 @@
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <form action="#" class="widget-header float-right">
@@ -133,51 +147,57 @@
 <body>
 <div class="container">
     <h2>Products</h2>
-
     <div class="card-deck mt-4 mb-4 text-center">
-
         <div class="card mb-4 shadow-sm">
             <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Adevarul</h4>
             </div>
             <div class="card-body">
                 <figure class="card card-product">
-                    <div class="img-wrap"><img width=200px; height=250px;
-                                               src="https://www.edituratrei.ro/images/productimage/2021/06/07/adevarul-1623048247.jpg">
+                    <div class="img-wrap"><img
+                            src="https://www.edituratrei.ro/images/productimage/2021/06/07/adevarul-1623048247.jpg">
                     </div>
-                    <h4 class="card-title pricing-card-title">100MDL</h4>
+                    <p class="card__text ">Author: Tom Phillips</p>
+                    <h4 class="card-text pricing-card-title">Price: 200 MDL</p></h4>
                     <p class="title">Scurtă istorie a tâmpeniilor omenești absolute</p>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
+                    <a href="#" data-name="Adevarul" data-price="200" class="add-to-cart btn btn-primary">Add to
+                        cart</a>
                 </figure>
             </div>
         </div>
+
         <div class="card mb-4 shadow-sm">
             <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Oamenii</h4>
             </div>
             <div class="card-body">
                 <figure class="card card-product">
-                    <div class="img-wrap"><img width=200px; height=250px;
-                                               src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/e1aa0675/5362/4919/be17/81967b1240bc/e1aa0675-5362-4919-be17-81967b1240bc_1.jpg">
+                    <div class="img-wrap"><img
+                            src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/e1aa0675/5362/4919/be17/81967b1240bc/e1aa0675-5362-4919-be17-81967b1240bc_1.jpg">
                     </div>
-                    <h4 class="card-title pricing-card-title">120MDL</h4>
+                    <p class="card__text ">Author: Tom Phillips</p>
+                    <h4 class="card-text pricing-card-title">Price: 180 MDL</p></h4>
                     <p class="title">O scurta istorie despre cum am stricat totul</p>
-                    <button type="button" class="btn btn-block btn-outline-danger"
-                            onClick="cartLS.add({id: 2, name: 'Oamenii', price: 120})">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
+                    <a href="#" data-name="Oamenii" data-price="180" class="add-to-cart btn btn-primary">Add to
+                        cart</a>
+                </figure>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Ucigasul ABC</h4>
+            </div>
+            <div class="card-body">
+                <figure class="card card-product">
+                    <div class="img-wrap"><img
+                            src="https://static.cinemagia.ro/img/resize/db/movie/26/06/065/the-abc-murders-841920l-0x640-h-14ddc068.jpg">
+                    </div>
+                    <p class="card__text ">Author: Agatha Cristie</p>
+                    <h4 class="card-text pricing-card-title">Price: 150 MDL</p></h4>
+                    <p class="title">Misterele care sunt prea complicate pentru poliţie</p>
+                    <a href="#" data-name="Ucigasul ABC" data-price="150" class="add-to-cart btn btn-primary">Add to
+                        cart</a>
                 </figure>
             </div>
         </div>
@@ -188,19 +208,14 @@
             </div>
             <div class="card-body">
                 <figure class="card card-product">
-                    <div class="img-wrap"><img width=200px; height=250px;
-                                               src="https://librarius.md/img/400/600/aHR0cHM6Ly9jZG4ubGlicmFyaXVzLm1kL2ltZy9jYXRhbG9nL2N1LXVsdGltYS1zdWZsYXJlXzE1MTE4NzQ2NDUuanBlZw_e__e_.jpeg">
+                    <div class="img-wrap"><img
+                            src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/e1aa0675/5362/4919/be17/81967b1240bc/e1aa0675-5362-4919-be17-81967b1240bc_1.jpg">
                     </div>
-                    <h4 class="card-title pricing-card-title">200MDL</h4>
+                    <p class="card__text">Author: Paul Kalanithi</p>
+                    <h4 class="card-text pricing-card-title">Price: 180 MDL</p></h4>
                     <p class="title">Viata merita traita,cind stii ca moartea nu e departe</p>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
+                    <a href="#" data-name="Cu ultima suflare" data-price="180" class="add-to-cart btn btn-primary">Add
+                        to cart</a>
                 </figure>
             </div>
         </div>
@@ -213,63 +228,32 @@
             </div>
             <div class="card-body">
                 <figure class="card card-product">
-                    <div class="img-wrap"><img width=200px; height=250px;
-                                               src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/0f19c22f/7f59/4dc7/aeb8/67e7cba055f6/0f19c22f-7f59-4dc7-aeb8-67e7cba055f6_1.jpg">
+                    <div class="img-wrap"><img
+                            src="http://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/0f19c22f/7f59/4dc7/aeb8/67e7cba055f6/0f19c22f-7f59-4dc7-aeb8-67e7cba055f6_1.jpg">
                     </div>
-                    <h4 class="card-title pricing-card-title">170MDL</h4>
+                    <p class="card__text ">Author: Agatha Cristie</p>
+                    <h4 class="card-text pricing-card-title">Price: 170 MDL</p></h4>
                     <p class="title">Cel mai bizar pacient al unui spital de psihiatrie</p>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
+                                     <a href="#" data-name="Pacientul" data-price="170" class="add-to-cart btn btn-primary">Add to
+                        cart</a>
                 </figure>
             </div>
         </div>
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Ucigasul ABC</h4>
-            </div>
-            <div class="card-body">
-                <figure class="card card-product">
-                    <div class="img-wrap"><img width=200px; height=250px;
-                                               src="https://static.cinemagia.ro/img/resize/db/movie/26/06/065/the-abc-murders-841920l-0x640-h-14ddc068.jpg">
-                    </div>
-                    <h4 class="card-title pricing-card-title">140MDL</h4>
-                    <p class="title">Misterele care sunt prea complicate pentru neîndemânatica noastră poliţie</p>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
-                </figure>
-            </div>
-        </div>
+
         <div class="card mb-4 shadow-sm">
             <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Cavernele de oţel</h4>
             </div>
             <div class="card-body">
                 <figure class="card card-product">
-                    <div class="img-wrap"><img width=200px; height=250px;
-                                               src="https://silviureut.ro/wp-content/uploads/2015/12/Caves-of-Steel.jpg">
+                    <div class="img-wrap"><img
+                            src="https://silviureut.ro/wp-content/uploads/2015/12/Caves-of-Steel.jpg">
                     </div>
-                    <h4 class="card-title pricing-card-title">210MDL</h4>
+                    <p class="card__text">Author: Paul Kalanithi</p>
+                    <h4 class="card-text pricing-card-title">Price: 210 MDL</p></h4>
                     <p class="title">Roman tipic polițist, care se îmbină cu lumea SF-ului</p>
-                    <button type="button" class="btn btn-block btn-outline-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
-                        </svg>
-                        Add to Cart
-                    </button>
+                    <a href="#" data-name="Cavernele de oţel" data-price="210" class="add-to-cart btn btn-primary">Add
+                        to cart</a>
                 </figure>
             </div>
         </div>
@@ -344,6 +328,9 @@
         </section>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/home.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript"></script>
 <!-- ========================= FOOTER END // ========================= -->
 </body>
 </html>
