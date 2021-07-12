@@ -1,3 +1,10 @@
+(function(){
+
+    $("#cart").on("click", function() {
+        $(".shopping-cart").fadeToggle( "fast");
+    });
+
+})();
 (function () {
     const productsContainer = document.querySelector("#grid");
     const cartContainer = document.querySelector("#shopping-cart");
@@ -48,11 +55,11 @@
         let total = 0;
         if (prices) {
             total = calculateTotal(prices);
-            totalPriceContainer.innerHTML = `<span class="total">Total: $${total.toFixed(
+            totalPriceContainer.innerHTML = `<span class="total">Total: MDL${total.toFixed(
                 2
             )}</span>`;
         } else {
-            totalPriceContainer.innerHTML = '<span class="total">Total: $0</span>';
+            totalPriceContainer.innerHTML = '<span class="total">Total: MDL 0</span>';
         }
     }
 

@@ -59,7 +59,7 @@
     cursor: pointer; }
 
 .header .header__cart .header__cart-btn {
-    background-color: transparent;
+    background-color: bisque;
     border: 2px solid #ea332a;
     padding: 0.8em;
     font-size: 1rem;
@@ -117,7 +117,7 @@
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    background-color: transparent;
+    background-color: bisque;
     color: #333;
     border: 1px solid #ea332a; }
 .header .header__cart .header__submenu .cart-btn:hover, .header .header__cart .header__submenu .cart-btn:focus {

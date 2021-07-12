@@ -85,10 +85,10 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <a href="cart.html" class="widget-header">
+                            <a href="#" class="widget-header">
                                 <div class="icontext">
                                     <div class="icon-wrap"><i class="text-light icon-sm fa fa-shopping-cart"></i></div>
-                                    <div class="text-wrap text-light">Cart</div>
+                                    <div class="text-wrap text-light" id="cart">Cart</div>
                                 </div>
                             </a>
                         </div>
@@ -105,62 +105,57 @@
             </div>
         </div>
     </nav>
+    <form action="#" class="widget-header float-right">
+        <div class="input-group">
+            <div class="header__cart">
+                <div class="header__submenu" id="submenu">
+                    <button class="header__cart-btn" id="toggle-cart-btn">
+                        <svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+                        </svg>
+                        Your Cart
+                    </button>
+                    <div id="shopping-cart" class="shopping-cart-container">
+                        <table  class="table bg-white" id="cart-content">
+                            <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <p class="total-container" id="total-price"></p>
+                        <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+                        <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
     <section class="header-main">
         <div class="container">
-            <div class="row d-flex justify-content-center align-items-center">
+            <div class="row d-flex align-items-left">
                 <div class="col-xl-4 col-lg-4 col-md-10 col-sm-10">
                     <div class="brand-wrap">
                         <img class="logo" src="images/logo.png">
                         <h2 class="logo-text">MyMarket</h2>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <form action="#" class="widget-header float-right">
-                        <div class="input-group">
-                            <input type="text" class="form-control-lg" placeholder="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <!--                                        <form action="#" class="widget-header float-right">-->
-                    <!--                                            <div class="input-group">-->
-                    <!--                                                <div class="header__cart">-->
-                    <!--                                                    <div class="header__submenu" id="submenu">-->
-                    <!--                                                        <button class="header__cart-btn" id="toggle-cart-btn">-->
-                    <!--                                                            <svg class="cart" width="24" height="24" viewBox="0 0 24 24">-->
-                    <!--                                                                <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>-->
-                    <!--                                                            </svg>-->
-                    <!--                                                            Your Cart-->
-                    <!--                                                        </button>-->
-                    <!--                                                        <div id="shopping-cart" class="shopping-cart-container">-->
-                    <!--                                                            <table id="cart-content">-->
-                    <!--                                                                <thead>-->
-                    <!--                                                                <tr>-->
-                    <!--                                                                    <th>Image</th>-->
-                    <!--                                                                    <th>Name</th>-->
-                    <!--                                                                    <th>Price</th>-->
-                    <!--                                                                    <th></th>-->
-                    <!--                                                                </tr>-->
-                    <!--                                                                </thead>-->
-                    <!--                                                                <tbody></tbody>-->
-                    <!--                                                            </table>-->
-                    <!--                                                            <p class="total-container" id="total-price"></p>-->
-                    <!--                                                            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>-->
-                    <!--                                                            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>-->
-                    <!--                                                        </div>-->
-                    <!--                                                    </div>-->
-                    <!--                                                </div>-->
-                    <!--                                            </div>-->
-                    <!--                                        </form>-->
-                </div>
+<!--                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">-->
+<!--                    <form action="#" class="widget-header float-right">-->
+<!--                        <div class="input-group">-->
+<!--                            <input type="text" class="form-control-lg" placeholder="Search">-->
+<!--                            <div class="input-group-append">-->
+<!--                                <button class="btn btn-primary" type="submit">-->
+<!--                                    <i class="fa fa-search"></i>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
             </div>
         </div>
     </section>
@@ -282,7 +277,6 @@
                             <strong>Phone: </strong> +123456789 <br>
                             <strong>Fax:</strong> +123456789
                         </p>
-
                         <div class="btn-group white">
                             <a class="btn btn-facebook" title="Facebook" target="_blank" href="#"><i
                                     class="fab fa-facebook-f  fa-fw"></i></a>
@@ -313,9 +307,7 @@
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="js/home.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-
-</script>
+<script type="text/javascript"></script>
 <!-- ========================= FOOTER END // ========================= -->
 </body>
 </html>
