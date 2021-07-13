@@ -134,211 +134,62 @@
 <br>
 <div class="container">
     <div class="starter-template">
-        <div class="info-table-header-block">
-            <button type="button" class="btn btn-primary add-new-button" data-toggle="modal" data-target="#addnewModal">
-                Add New
-            </button>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="addnewModal" tabindex="-1" role="dialog" aria-labelledby="addnewModalTitle"
-             aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="addnewModalTitle">Insert Product Information</h4>
-                    </div>
-                    <!-- User Create Modal Start -->
-                    <div class="modal-body">
-                        <form id="input_form" onsubmit="saveMemberInfo(); return false;">
-                            <div class="form-group">
-                                <label for="name">Name
-                                    <span class="required-field">*</span>
-                                </label>
-                                <input type="text" class="form-control" placeholder="Enter Name of Product" id="name"
-                                       required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="author">Author
-                                    <span class="required-field">*</span>
-                                </label>
-                                <input type="text" class="form-control" placeholder="Enter Author of Product"
-                                       id="author" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Description
-                                    <span class="required-field">*</span>
-                                </label>
-                                <input type="text" class="form-control" placeholder="Enter Description of Product"
-                                       id="description" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Price
-                                    <span class="required-field">*</span>
-                                </label>
-                                <input type="number" class="form-control" placeholder="Enter Price of Product "
-                                       id="price" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="category">Category
-                                    <span class="required-field">*</span>
-                                </label>
-                                <input type="text" class="form-control" placeholder="Enter Category of Product"
-                                       id="category" required/>
-                            </div>
-
-                            <div class="modal-footer-extended">
-                                <button class="btn btn-primary">Create</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- User Create Modal End -->
-                </div>
-            </div>
-        </div>
-        <table id="member_table" class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td>
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <label class="validation-error hide" id="nameValidationError"></label>
+                            <input class="form-control" placeholder="Enter Name of Product" type="text" name="name"
+                                   id="name">
+                        </div>
+                        <div class="form-group">
+                            <label>Author </label>
+                            <input class="form-control" placeholder="Enter Author of Product"  type="text" name="author" id="author">
+                        </div>
+                        <div class="form-group">
+                            <label>Description </label>
+                            <input type="text" class="form-control" placeholder="Enter Description of Product" name="description" id="description"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Price </label>
+                            <input type="number" class="form-control" placeholder="Enter Price of Product" name="price" id="price"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <input type="text" class="form-control" placeholder="Enter Category of Product" id="category" name="category"/>
+                        </div>
+                        <div class="form-action-buttons ">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h4 class="title-text text-primary text-center">Products</h4>
+    <td>
+        <table id="employeeList" class="table table-bordered table-hover">
             <thead>
             <tr>
-                <th>#</th>
                 <th>Name</th>
                 <th>Author</th>
                 <th>Description</th>
                 <th>Price</th>
                 <th>Category</th>
-                <th>Actions</th>
+                <th>Operation</th>
             </tr>
             </thead>
+            <!-- to dynamically add record on data submission -->
+            <tbody>
+            </tbody>
         </table>
     </div>
-</div>
-
-<!-- User Information Modal Start -->
-<div id="show_user_info">
-    <div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="showModalTitle"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="showModal">Product Information</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="show_name">Name</label>
-                        <input type="text" class="form-control" id="show_name" value="" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="show_author">Author</label>
-                        <input type="text" class="form-control" id="show_author" value="" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="show_description">Description</label>
-                        <input type="text" class="form-control" id="show_description" value="" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="show_price">Price</label>
-                        <input type="email" class="form-control" id="show_price" value="" disabled>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="show_category">Category</label>
-                        <input type="text" class="form-control" id="show_category" value="" disabled>
-                    </div>
-
-                    <div class="modal-footer-extended">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- User Information Modal End -->
-
-<!-- User Edit Modal Start -->
-<div id="show_user_info">
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalTitle"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="editModal">Edit Product Information</h4>
-                </div>
-                <div class="modal-body">
-                    <form onsubmit="updateMemberData(); return false;">
-                        <div class="form-group">
-                            <label for="edit_name">Name
-                                <span class="required-field">*</span>
-                            </label>
-                            <input type="text" class="form-control" id="edit_name" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="edit_author">Author
-                                <span class="required-field">*</span>
-                            </label>
-                            <input type="text" class="form-control" id="edit_author" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="edit_description">Description
-                                <span class="required-field">*</span>
-                            </label>
-                            <input type="text" class="form-control" id="edit_description" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="edit_price">Price
-                                <span class="required-field">*</span>
-                            </label>
-                            <input type="number" class="form-control" id="edit_price" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="edit_category">Category
-                                <span class="required-field">*</span>
-                            </label>
-                            <input type="text" class="form-control" id="edit_category" value="" required/>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="hidden" class="form-control" id="member_id">
-                        </div>
-
-                        <div class="modal-footer-extended">
-                            <button class="btn btn-success">Update</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- User Edit Modal End -->
-
-<!-- Delete Confirmation Dialog Start -->
-<div id="show_user_info">
-    <div class="modal fade" id="deleteDialog" tabindex="-1" role="dialog" aria-labelledby="deleteDialogTitle"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="deleteDialog">Warning!</h4>
-                </div>
-                <div class="modal-body">
-                    <h4>Are you sure, want to delete this member? </h4>
-                    <input type="hidden" id="deleted-member-id" value="">
-                    <div class="modal-footer-extended">
-                        <button class="btn btn-danger" onclick="deleteMemberData()">Delete</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</body>
 <!-- ========================= SECTION INTRO END// ========================= -->
-
 <!-- =================== FOOTER ========================= -->
-<footer class="section-footer bg-primary fixed-bottom">
+<footer class="section-footer bg-primary ">
     <div class="container">
         <section class="footer-top padding-top">
             <div class="row">
@@ -407,7 +258,8 @@
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="js/home.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript"></script>
+        <script src="js/crud.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript"></script>
 <!-- ========================= FOOTER END // ========================= -->
 </body>
 </html>
