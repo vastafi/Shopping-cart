@@ -91,8 +91,6 @@ function readFormData() {
     formData.description = document.getElementById("description").value;
     formData.price = document.getElementById("price").value;
     formData.category = document.getElementById("category").value;
-    //   formData.image = document.getElementById("image").value;
-    //   formData.image_src = document.getElementById("image_src").value;
     return formData;
 }
 
